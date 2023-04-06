@@ -23,4 +23,4 @@ def text_indentation(text):
             print(string.strip())
             print()
             string = ""
-    print(string.strip())
+    print(string.strip(), end="")
