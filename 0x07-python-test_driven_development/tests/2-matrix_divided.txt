@@ -1,0 +1,171 @@
+#1-matrix_divided.py
+
+=========================
+How to use matrix_divided
+=========================
+
+This module defines a function ``matrix_divided(matrix. div)`` that divides all elements of a matrix by div
+
+Usage
+=====
+
+The function returns a new matrix made up of the quotients of the element division
+The elements may be integers
+
+::
+
+	>>> matrix_divided = __import__('1-matrix_divided').matrix_divided
+	>>> matrix = [
+		[1, 2, 3],
+		[4, 5, 6]
+	]
+	>>> matrix_divided(matrix, 3)
+	##
+
+The elements may be floats
+
+::
+
+	>>> matrix = [
+                [1.2, 2.3, 3.4],
+                [4.5, 5.6, 6.7]
+        ]
+	>>> matrix_divided(matrix, 3)
+	##
+
+The elements may be negative numbers
+
+::
+
+        >>> matrix_divided = __import__('1-matrix_divided').matrix_divided
+        >>> matrix = [
+                [-1, -2, -3],
+                [-4, -5, -6]
+        ]
+        >>> matrix_divided(matrix, 3)
+        ##
+
+
+The div may be a float
+
+::
+
+        >>> matrix = [
+                [1, 2, 3],
+                [4, 5, 6]
+        ]
+        >>> matrix_divided(matrix, 3.4)
+        ##
+
+The div may also be a negative number
+
+::
+
+        >>> matrix = [
+                [1, 2, 3],
+                [4, 5, 6]
+        ]
+        >>> matrix_divided(matrix, -3)
+        ##
+
+
+The elements may be a mixture of floats and ints
+
+::
+
+	>>> matrix = [
+                [1, 2.3, 3],
+                [4.5, 5, 6.7]
+        ]
+        >>> matrix_divided(matrix, 3)
+        ##
+
+The elements may be a mixture of floats, ints, positive and negative numbers
+
+::
+
+        >>> matrix = [
+                [1, 2.3, -3],
+                [-4.5, 5, 6.7]
+        ]
+        >>> matrix_divided(matrix, 3)
+        ##
+
+
+Div cannot be equal to zero
+A ZeroDivision exception is raised if div is zero
+
+::
+
+        >>> matrix = [
+                [1.2, 2.3, 3.4],
+                [4.5, 5.6, 6.7]
+        ]
+        >>> matrix_divided(matrix, 0)
+        Traceback (most recent call last):
+        ZeroDivisionError: division by zero
+
+
+The rows of the matrix must be of equal size
+A TypeError exception is raised if the sizes aren't equal
+
+::
+
+	>>> matrix = [
+                [1.2, 2.3],
+                [4.5, 5.6, 6.7]
+        ]
+        >>> matrix_divided(matrix, 3)
+        Traceback (most recent call last):
+        TypeError: Each row of the matrix must have the same size
+
+Non-Numbers
+===========
+
+``matrix_divided()`` expects the matrix to be made up of integers or floats
+A TypeError exception is raised if any of the elements are of a different type
+
+::
+
+        >>> matrix = [
+                ['the', 'quick, 3],
+                [4, 5, 6]
+        ]
+        >>> matrix_divided(matrix, 3)
+        Traceback (most recent call last):
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Div must also be an integer or a float
+A TypeError exception is raised if it is of a different type
+
+:
+
+	>>> matrix = [
+                [1.2, 2.3],
+                [4.5, 5.6, 6.7]
+        ]
+        >>> matrix_divided(matrix, 'hello')
+
+``matrix_divided()`` expects the matrix to be made up of integers or floats
+A TypeError exception is raised if the matrix is empty
+
+::
+
+        >>> matrix = []
+        >>> matrix_divided(matrix, 3)
+        Traceback (most recent call last):
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Div must also be an integer or a float
+A TypeError exception is raised if it is None
+
+:
+
+        >>> matrix = [
+                [1.2, 2.3],
+                [4.5, 5.6, 6.7]
+        ]
+        >>> matrix_divided(matrix, None)
+
+
+	
