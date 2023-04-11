@@ -1,0 +1,19 @@
+#1-my_list.py
+
+=======================
+How to use 1-my_list.py
+=======================
+
+This module defines a class MyList
+
+Usage
+=====
+
+The class MyList is a subclass of the class list
+
+::
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> issubclass(MyList, list)
+	True
