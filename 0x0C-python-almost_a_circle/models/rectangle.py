@@ -17,10 +17,10 @@ class Rectangle(Base):
             y: The vertical position of the rectangle
             id(int): The id of the new rectangle
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
