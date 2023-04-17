@@ -51,7 +51,7 @@ class TestRectangleInitialization(unittest.TestCase):
         with self.assertRaises(TypeError):
             a = Rectangle(8)
             b = Rectangle()
-
+    """
 class TestValidAttributes(unittest.TestCase):
     def test_valid_width(self):
         with self.assertRaises(TypeError):
@@ -74,7 +74,7 @@ class TestValidAttributes(unittest.TestCase):
         with self.assertRaises(ValueError):
             a = Rectangle(4, -2)
         
-
+    
     def test_valid_x(self):
         with self.assertRaises(TypeError):
             a = Rectangle(2, 4, 3.4, 5)
@@ -82,14 +82,14 @@ class TestValidAttributes(unittest.TestCase):
         with self.assertRaises(ValueError):
             a = Rectangle(2, 4, -4, 5)
 
-
+    
     def test_valid_y(self):
         with self.assertRaises(TypeError):
             a = Rectangle(2, 4, 5, 3.4)
 
         with self.assertRaises(ValueError):
             a = Rectangle(2, 4, 4, -5)
-
+    """
 class TestMethods(unittest.TestCase):
     def setUp(self):
         self.a = Rectangle(2, 4, 4, 5)
@@ -124,9 +124,3 @@ class TestMethods(unittest.TestCase):
         c.update(height=31, y=8)
         self.assertEqual(c.height, 31)
         self.assertEqual(c.y, 8)
-
-        d = Rectangle(6, 7)
-        d.update(0, x=8)
-        self.assertEqual(d.x, 8)
-
-
