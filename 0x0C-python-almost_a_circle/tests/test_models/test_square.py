@@ -158,3 +158,14 @@ class TestKwargs(unittest.TestCase):
         self.assertEqual(c.size, 31)
         self.assertEqual(c.y, 8)
 
+class TestToDictionary(unittest.TestCase):
+    def test_dict_repr(self):
+        a = Square(1, 3, 4, 7)
+        a_dict = a.to_dictionary()
+        self.assertEqual(a_dict, {'x': 3, 'y': 4, 'id': 7, 'size':1})
+
+    def test_dict_type(self):
+        a = Rectangle(1, 3, 4, 7)
+        a_dict = a.to_dictionary()
+        self.assertEqual(type(a_dict), dict)
+

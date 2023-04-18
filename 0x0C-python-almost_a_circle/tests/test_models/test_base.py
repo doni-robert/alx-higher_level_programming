@@ -7,6 +7,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(a.id, 2)
 
     def test_id_none(self):
-        b Base()
+        b = Base()
         self.assertEqual(b.id, 1)
 
