@@ -17,7 +17,7 @@ class Square(Rectangle):
             y: The vertical position of the square
             id(int): The id of the new square
         """
-        super().__init__(size, size, x, y, id=None)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -31,7 +31,7 @@ class Square(Rectangle):
         self.length = value
 
     def __str__(self):
-        """ Prints a rectangle description"""
+        """ Prints a square description"""
         return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
                                              self.id, self.x, self.y,
                                              self.width)
