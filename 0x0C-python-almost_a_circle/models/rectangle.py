@@ -100,6 +100,7 @@ class Rectangle(Base):
                                                 self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """ Updates the attributes """
         list_attr = ['id', 'width', 'height', 'x', 'y']
         if args is not None and len(args) != 0:
             for i in range(len(args)):
